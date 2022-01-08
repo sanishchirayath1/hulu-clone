@@ -1,3 +1,57 @@
 .container {
- 
+  display: flex;
+  margin-top: 1rem;
+  position: relative;
+  div {
+    display: flex;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    //hide scrollbar
+    -ms-overflow-style: none;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    h2 {
+      cursor: pointer;
+      white-space: nowrap;
+      font-size: 1.2rem;
+      font-weight: 400;
+      margin-left: 1.5rem;
+      transition: 100ms scale;
+      &:hover,
+      &:focus {
+        color: white;
+        transform: scale(1.25);
+      }
+    }
+    &:last-child h2 {
+      margin-right: 1.5rem;
+    }
+  }
+  .fade {
+    width: 100px;
+    height: 100px;
+    //background color fades from #06202a 0% to #06202a = hsla(197, 75%, 9%,0%)
+    background: linear-gradient(
+      to right,
+      hsla(197, 75%, 9%, 0%) 0%,
+      hsla(197, 75%, 9%, 100%) 120%
+    );
+    position: absolute;
+    right: 0;
+  }
+}
+@media screen and (min-width: 768px) {
+  .container {
+    margin-top: 0;
+    div {
+      h2 {
+        margin-left: 2rem;
+      }
+      &:last-child h2 {
+        margin-right: 2rem;
+      }
+    }
+  }
 }
