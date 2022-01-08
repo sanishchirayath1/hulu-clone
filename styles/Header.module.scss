@@ -1,7 +1,29 @@
 .container {
-   
-   img {
+  display: flex;
+  flex-direction: column;
+
+  img {
+   width: 100%;
+   object-fit: contain;
+  }
+  .iconContainer {
+    max-width: 49rem;
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+    justify-content: space-evenly;
+    padding-top: 1.5rem;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    img {
       width: 100%;
       object-fit: contain;
-   }
+    }
+  }
 }

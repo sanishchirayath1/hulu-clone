@@ -1,7 +1,10 @@
-function HeaderItem() {
+import HeaderItemStyle from '../styles/HeaderItem.module.scss'
+
+function HeaderItem({title, Icon}) {
     return (
-        <div>
-            <h1>header item</h1>
+        <div className={HeaderItemStyle.container}>
+            <Icon className={HeaderItemStyle.icon}/>
+            <p>{title}</p>
         </div>
     )
 }

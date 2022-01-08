@@ -1,0 +1,52 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  width: 3rem;
+  p {
+    letter-spacing: 0.15rem;
+    font-weight: 400;
+    margin: 0;
+    opacity: 0;
+  }
+
+  .icon {
+    width: 1.5em;
+    height: 1.5em;
+    margin-bottom: 0.2rem;
+  }
+
+  &:hover {
+    color: white;
+    p {
+      opacity: 1;
+    }
+    .icon {
+      -webkit-animation: bounce 1s infinite;
+      animation: bounce 1s infinite;
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    width: 5rem;
+  }
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    -webkit-transform: translateY(-25%);
+    transform: translateY(-25%);
+    -webkit-animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+    animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+  }
+  50% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    -webkit-animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+    animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  }
+}
