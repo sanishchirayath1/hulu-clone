@@ -1,0 +1,34 @@
+.container {
+  cursor: pointer;
+  &:hover {
+    .details {
+      p.hoverPara {
+        opacity: 1;
+      }
+      h3 {
+          font-weight: bolder;
+      }
+    }
+    transform: scale(1.05);
+    z-index: 50;
+  }
+  transition: all 0.3s ease-in-out;
+  
+}
+
+.details {
+  p {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    font-size: 0.8rem;
+  }
+  h3 {
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin-top: 0.5rem;
+  }
+  p.hoverPara {
+    opacity: 0;
+  }
+}

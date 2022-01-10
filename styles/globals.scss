@@ -7,7 +7,10 @@ body {
   margin: 0;
   color: rgb(221, 221, 221);
   background: #06202A;
-  overflow: hidden;
+  overflow-x: hidden;
+}
+ul {
+  list-style: none;
 }
 
 a {

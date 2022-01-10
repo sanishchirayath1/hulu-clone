@@ -6,16 +6,16 @@ function Navbar() {
     const router = useRouter();
     return (
         <nav className={navbarStyles.container}>
-            <div>
+            <ul>
                 {Object.entries(requests).map(([key, {title, url}]) => (
-                    <h2 
+                    <li 
                     key={key}
-                    onClick={() => router.push(url)}
+                    onClick={() => router.push(`?genre=${key}`)}
                     >
                         {title}
-                    </h2>
+                    </li>
                 ))}
-            </div>
+            </ul>
             <div className={navbarStyles.fade}></div>
         </nav>
     )
