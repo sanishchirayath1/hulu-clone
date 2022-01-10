@@ -1,9 +1,8 @@
 import ThumbnailStyle from '../styles/Thumbnail.module.scss'
 import { ThumbUpIcon } from "@heroicons/react/outline"
 import Image from "next/image"
-import { forwardRef } from 'react'
 
-const Thumbnail = forwardRef(({ result }, ref) => {
+const Thumbnail = ({ result }, ref) => {
     return (
         <div ref={ref} className={ThumbnailStyle.container}>
             <Image 
@@ -26,6 +25,6 @@ const Thumbnail = forwardRef(({ result }, ref) => {
 
         </div>
     )
-})
+}
 
 export default Thumbnail
