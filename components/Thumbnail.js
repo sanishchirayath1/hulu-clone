@@ -1,8 +1,10 @@
 import ThumbnailStyle from '../styles/Thumbnail.module.scss'
 import { ThumbUpIcon } from "@heroicons/react/outline"
 import Image from "next/image"
+import { forwardRef } from 'react'
 
-const Thumbnail = ({ result }, ref) => {
+// eslint-disable-next-line react/display-name
+const Thumbnail = forwardRef(({ result }, ref) => {
     return (
         <div ref={ref} className={ThumbnailStyle.container}>
             <Image 
@@ -25,6 +27,6 @@ const Thumbnail = ({ result }, ref) => {
 
         </div>
     )
-}
+})
 
 export default Thumbnail

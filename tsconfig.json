@@ -23,7 +23,7 @@
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx"
-, "components/Thumbnail.js"  ],
+, "components/Thumbnail.js", "components/Results.js"  ],
   "exclude": [
     "node_modules"
   ]
