@@ -1,12 +1,13 @@
 import Head from 'next/head'
-// import Image from 'next/image'
+import type { GetServerSideProps } from 'next'
+import type { Results } from '../type'
 import styles from '../styles/Home.module.scss'
 import Layout from '../components/Layout'
-import Results from '../components/Results'
+import ResultsPage from '../components/Results'
 import requests from '../utils/requests'
 
 
-const Home = ({results}) => {
+const Home = ({results} : Results) => {
   console.log(results)
   return (
     <div className={styles.container}>
@@ -16,18 +17,19 @@ const Home = ({results}) => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Layout>
-        <Results results={results}/>
+        <ResultsPage results={results}/>
       </Layout>
     </div>
   )
 }
 export default Home
 
-export async function getServerSideProps(context) {
+export const getServerSideProps: GetServerSideProps = async (context) => {
 
-  const genre = context.query.genre
+  const genre = context.query.genre as string
   const results = await fetch(`https://api.themoviedb.org/3${requests[genre]?.url || requests.fetchTrending.url}`)
-  const data = await results.json()
+  
+  const data: {results: Results} = await results.json()
 
   return {
     props: {

@@ -1,6 +1,6 @@
 import layoutStyle from '../styles/Layout.module.scss';
-import Header from '../components/Header'
-import Navbar from '../components/Navbar'
+import Header from './Header'
+import Navbar from './Navbar'
 
 function Layout({ children }) {
     return (
