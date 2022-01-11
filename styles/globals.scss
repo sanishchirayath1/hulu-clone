@@ -1,14 +1,25 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap");
 
 html,
 body {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   padding: 0;
   margin: 0;
   color: rgb(221, 221, 221);
-  background: #06202A;
+  background: #06202a;
   overflow-x: hidden;
 }
+
+/* Prevent text selection of an <body> element in all major browsers */
+body {
+  -youbkit-touch-callout: none; /* iOS Safari */
+  -youbkit-user-select: none; /* Chrome 6.0+, Safari 3.1+, Edge & Opera 15+ */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE 10+ and Edge */
+  user-select: none; /* Non-prefixed version,
+                              currently supported by Chrome and Opera */
+}
+
 ul {
   list-style: none;
 }
